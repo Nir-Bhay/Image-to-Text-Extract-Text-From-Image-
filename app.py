@@ -9,6 +9,8 @@ app = Flask(__name__)
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 @app.route('/')
+def home():
+    return "Hello from Vercel Python!"
 def index():
     return render_template('index.html')
 
