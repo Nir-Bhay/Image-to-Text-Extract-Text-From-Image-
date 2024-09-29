@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Upload Image or PDF for OCR</h1>
+        <div id="drop-area" class="drop-area">
+            <p>Drag & Drop your file here or click to upload</p>
+            <input type="file" id="fileElem" accept="image/*,.pdf" onchange="handleFiles(this.files)">
+        </div>
+        <button id="uploadBtn" onclick="uploadFile()">Extract Text</button>
+        <div id="loader" class="loader" style="display:none;"></div>
+        <div id="output" class="output">
+            <h2>Extracted Text</h2>
+            <pre id="text-output"></pre>
+            <button id="copyBtn" onclick="copyText()">Copy Text</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
